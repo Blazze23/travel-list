@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+:root {
+  --main-bg-color: #ffffff;
+  --primary-color: #00a9e0;
+  --secondary-color: #f76b8a;
+  --accent-color: #ffd166;
+  --text-color-dark: #333333;
+  --text-color-light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2.4rem;
+  color: var(--text-color-dark);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  text-align: center;
+  padding: 2.4rem 0;
+  font-weight: 300;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 8rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.app-form {
+  background-color: var(--accent-color);
+  padding: 2.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+.form {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+button,
+select,
+input {
+  background-color: hsl(42, 100%, 80%);
+  color: var(--text-color-dark);
+  font-family: inherit;
+  border: none;
+  border-radius: 10rem;
+  padding: 1.2rem 3.2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.app-form button {
+  background-color: var(--secondary-color);
+}
+
+.app-form button:hover {
+  font-weight: 700;
+}
+
+.app-form select,
+input,
+.list select {
+  outline-color: var(--accent-color);
+}
+
+h3 {
+  font-family: "Pacifico", cursive;
+  margin-right: 1.6rem;
+  font-size: 2.4rem;
+}
+
+.list {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+}
+
+.list ul {
+  list-style: none;
+  width: 80%;
+  /* overflow: scroll; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+  justify-content: center;
+  align-content: start;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+  accent-color: var(--secondary-color);
+}
+
+.list li button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  padding: 0.8rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.actions button {
+  background-color: var(--secondary-color);
+}
+
+.actions button:hover {
+  font-weight: 700;
+}
+
+.stats {
+  color: var(--accent-color);
+  background-color: var(--secondary-color);
+  text-align: center;
+  font-weight: 300;
+  padding: 3.2rem 0;
+}
+
+.stats em {
+  font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 18px;
+  }
+  .form,
+  .actions {
+    display: grid;
+  }
+
+  .stats em {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  header h1 {
+    font-size: 3.5rem;
+  }
+
+  .list li {
+    font-size: 20px;
+  }
+  .stats em {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header h1 {
+    font-size: 5rem;
+  }
+  .stats em {
+    font-size: 3rem;
+  }
+
+  .list li {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header h1 {
+    font-size: 7rem;
+  }
+  header p {
+    font-size: 3rem;
+  }
+}
